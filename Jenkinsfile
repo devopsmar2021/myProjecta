@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('checkout') {
       steps {
-        git 'git@github.com:devopsmar2021/myProjecta.git'
+        git credentialsId: 'github_user', url: 'git@github.com:devopsmar2021/myProjecta.git'
       }
     }
     stage('Build') {
